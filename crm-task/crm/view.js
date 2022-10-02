@@ -817,8 +817,8 @@ async function launchApp(clientList, {
     });
 
     document.querySelectorAll('.table__header-el').forEach(item => {
-        item.addEventListener('click',async function() {
-            if (item.textContent === 'Контакты' || 'Дейсвия') return;
+        item.addEventListener('click', async function(event) {
+            if (event.target.textContent === 'Контакты' || event.target.textContent === 'Действия') return;
 
             const search = document.querySelector('.header__input').value;
 
