@@ -443,6 +443,10 @@ function createModal(title, bottomBtn, toUpdate, deleteTrigger, row) {
     content.append(cancelBtn);
     modal.append(content);
 
+    function destroy(el) {
+        el.remove();
+    }
+
     return {
         modal,
         addBtn,
@@ -454,6 +458,7 @@ function createModal(title, bottomBtn, toUpdate, deleteTrigger, row) {
         surname,
         name,
         middleName,
+        destroy
     };
 };
 
@@ -758,7 +763,7 @@ async function launchApp(clientList, {
             confirmModal.form.addEventListener('submit', (e)=> {
                 e.preventDefault();
                 deleteClient(toRemove ,id).then(() => {
-                    location.reload();
+                    confirmModal.destroy(confirmModal.modal);
                 });
             });
         })
