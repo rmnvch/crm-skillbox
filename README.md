@@ -1,5 +1,6 @@
 # JS basics SKILLBOX course final project
 App link: https://rmnvch.github.io/crm-skillbox/
+<br>Short video introduction link: https://youtu.be/1Y87eXqXJlw
 <br> 
 This project is an implementation of a basic CRUD App which allows user to maintain clients database by adding, updatind and deleting items from database. (Please note: this App has backend part
 which was not originally developed by me as it was provided by school and it was slightly modified by me in order to make deploy on Heroku. 
